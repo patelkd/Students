@@ -6,14 +6,15 @@ import java.awt.*;
 public class Students {
 	public static void main(String[] args) throws IOException {
 		Random random = new Random();
-		int i = random.nextInt(names.length);
 
 		File file = new File("class.csv");
 		Scanner scan = new Scanner (file);
 		String[] names = scan.nextLine().split(",");
 
 		for (int i=0; i<names.length; i++)  {
-			System.out.println(names[i]);
+			Random rand = new Random();
+			int ran = random.nextInt(names.length);
+			System.out.println(names[ran]);
 		}
 
 		// System.out.println("How many groups do you want?");
